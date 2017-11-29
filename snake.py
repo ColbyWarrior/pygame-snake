@@ -1,7 +1,7 @@
 '''
 Snake game.
 Authors:
-<insert the names of your teammates here>
+Colby Warrior, Ahman Potter
 '''
 
 import pygame
@@ -28,13 +28,13 @@ DIRECTION_UP = (0, -1)
 DIRECTION_DOWN = (0, 1)
 
 # Background color of the snake grid.
-COLOR_BACKGROUND = (255, 255, 255)  # rgb color for white
+COLOR_BACKGROUND = (232, 30,38 )  
 # This is the color of the snake's head. 
-COLOR_SNAKE_HEAD = (255, 0, 0)      # rgb color for red
+COLOR_SNAKE_HEAD = (35, 58, 128)      
 # This is the color of the rest of the snake.
-COLOR_SNAKE = (0, 255, 0)           # rgb color for green
+COLOR_SNAKE = (0, 255, 0)           
 # This is the color for the snake's food.
-COLOR_FOOD = (255, 200, 0)          # rgb color for orange
+COLOR_FOOD = (255, 255, 255)          # rgb color for orange
 # This is the color for the game over text.
 COLOR_GAME_OVER_TEXT = (0, 0, 0)    # rgb color for black
 
@@ -48,6 +48,10 @@ def get_direction(previous_direction, event_key):
         return DIRECTION_LEFT
     elif event_key == pygame.K_UP:
         return DIRECTION_UP
+    elif event_key == pygame.K_DOWN:
+        return DIRECTION_DOWN
+    elif event_key == pygame.K_RIGHT:
+        return DIRECTION_RIGHT
     return previous_direction
 
 def create_food_position():
@@ -55,7 +59,8 @@ def create_food_position():
     The first element is the x position. Must be an int between 0 and GRID_WIDTH - 1, inclusively.
     The second element is the y position. Must be an int between 0 and GRID_HEIGHT - 1, inclusively.
     """
-    return
+    
+
 
 def snake_ate_food(snake, food):
     """Returns whether food was eaten by the snake.
