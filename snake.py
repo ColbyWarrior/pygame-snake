@@ -12,6 +12,7 @@ import sys
 GRID_WIDTH = 30
 # The game grid contains this many cells in the y direction. A piece of food or a segment of the snake takes up one cell.
 GRID_HEIGHT = 30
+
 # The height and width of each square cell in pixels.
 PIXELS_IN_CELL = 20
 # The width of the game grid in pixels.
@@ -79,9 +80,9 @@ def snake_ran_out_of_bounds(snake):
     Note that the grid is GRID_WIDTH cells wide and GRID_HEIGHT cells high.
     """
 
-    if snake[0][0] >= GRID_WIDTH:
+    if snake[1][1] >= GRID_WIDTH:
         return True
-    if snake[0][0] <= 0:
+    if snake[1][1] <= 0:
         return True
     if snake[0][1] >= GRID_HEIGHT:
         return True
@@ -279,3 +280,4 @@ def start_game():
 
 # Start the snake game.
 start_game()
+
